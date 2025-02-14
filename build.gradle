@@ -11,7 +11,7 @@ repositories {
 dependencies {
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
     implementation 'io.quarkiverse.config:quarkus-config-consul'
-    implementation 'io.quarkus:quarkus-hibernate-orm'
+    implementation 'io.quarkus:quarkus-hibernate-orm-panache'
     implementation 'io.quarkus:quarkus-info'
     implementation 'io.quarkus:quarkus-quartz'
     implementation 'io.quarkus:quarkus-config-yaml'
@@ -21,9 +21,12 @@ dependencies {
 //    implementation 'io.quarkus:quarkus-redis-cache'
     implementation 'io.quarkus:quarkus-jdbc-postgresql'
     implementation 'io.quarkus:quarkus-arc'
-    implementation group: 'io.quarkiverse.microprofile', name: 'quarkus-microprofile', version: '3.4.0'
+    implementation 'io.quarkiverse.microprofile:quarkus-microprofile:3.4.0'
     testImplementation 'io.quarkus:quarkus-junit5'
-}
+    implementation 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.36'
+    }
 
 group 'org.vlkn.learning'
 version '1.0-SNAPSHOT'
