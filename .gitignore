@@ -80,3 +80,6 @@ fabric.properties
 #gradle deps
 /build
 .gradle/
+
+#local db files
+/var

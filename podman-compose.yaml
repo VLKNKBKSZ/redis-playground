@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: docker.io/library/postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: hibernate
+      POSTGRES_PASSWORD: hibernate
+    ports:
+      - "5432:5432"
+    volumes:
+      - /home/elantris/IdeaProjects/redis-playground/var/lib/data:/var/lib/postgresql/data

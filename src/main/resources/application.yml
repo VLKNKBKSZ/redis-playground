@@ -1,2 +1,10 @@
-greeting:
-  message: "hello"
+quarkus:
+  datasource:
+    db-kind: postgresql
+    username: hibernate
+    password: hibernate
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/postgres
+  hibernate-orm:
+    database:
+      generation: drop-and-create
